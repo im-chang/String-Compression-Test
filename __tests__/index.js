@@ -23,11 +23,38 @@ describe("stringCompression", () => {
     });
   });
 });
-describe("stringCompression", () => {
+describe("when a string compression contains same letters in different positions", () => {
   describe("when word is hhhhfffkkkhhh", () => {
     it("should return h4f3k3h3", () => {
       const result = stringCompression("hhhhfffkkkhhh");
       expect(result).toEqual("h4f3k3h3");
     });
+  });
+});
+describe("when string contains non-letters", () => {
+  describe("when string contains number", () => {
+    it("should throw an error", () => {
+      const result = stringCompression(98089);
+      expect(result).toEqual(0);
+    });
+  });
+});
+describe("when not a string", () => {
+  it("should return 0", () => {
+    const result = stringCompression(420);
+    expect(result).toEqual(0);
+  });
+});
+
+describe("when is called without an argument", () => {
+  it("should throw an error", () => {
+    const result = stringCompression();
+    expect(result).toEqual(0);
+  });
+});
+describe("when is called with an empty string", () => {
+  it("should throw an error", () => {
+    const result = stringCompression();
+    expect(result).toEqual(0);
   });
 });
