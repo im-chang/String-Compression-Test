@@ -58,3 +58,9 @@ describe("when is called with an empty string", () => {
     expect(result).toEqual(0);
   });
 });
+describe("when is called with an empty string", () => {
+  it("should ignore those and count the letters", () => {
+    const result = stringCompression("--Hello World!!!---");
+    expect(result).toEqual("h1e1l2o1w1o1r1l1d1");
+  });
+});
