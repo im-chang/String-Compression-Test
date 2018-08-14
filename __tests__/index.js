@@ -23,3 +23,11 @@ describe("stringCompression", () => {
     });
   });
 });
+describe("stringCompression", () => {
+  describe("when word is hhhhfffkkkhhh", () => {
+    it("should return h4f3k3h3", () => {
+      const result = stringCompression("hhhhfffkkkhhh");
+      expect(result).toEqual("h4f3k3h3");
+    });
+  });
+});
